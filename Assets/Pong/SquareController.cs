@@ -23,20 +23,7 @@ public class SquareController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CheckIfKeyIsHeldDown(upKey))
-        {
-            Rigidbody2D.velocity = Vector2.up * speed;
-        }
-        else if (CheckIfKeyIsHeldDown(downKey))
-        {
-            Rigidbody2D.velocity = Vector2.down * speed;
-        }
-        else
-        {
-            Rigidbody2D.velocity = Vector2.zero;
-        }
+         Rigidbody2D.velocity = new Vector2(speed * Input.GetAxis("Horizontal"),  speed * Input.GetAxis("Vertical"));
     }
-
-    public bool CheckIfKeyIsHeldDown(KeyCode k) => Input.GetKey(k);
 
 }
