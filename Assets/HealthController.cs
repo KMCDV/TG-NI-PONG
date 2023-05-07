@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    public int health;
-    public void AddHealth(int hp) => health += hp;
+    public IntValue playerHealth;
+    public void AddHealth(int hp) => playerHealth.value += hp;
 }

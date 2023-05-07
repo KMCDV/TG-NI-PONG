@@ -235,7 +235,8 @@ GameObject:
   - component: {fileID: 1798389169}
   - component: {fileID: 1798389172}
   - component: {fileID: 1798389171}
-  - component: {fileID: 1798389170}
+  - component: {fileID: 1798389173}
+  - component: {fileID: 1798389174}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -263,19 +264,6 @@ RectTransform:
   m_AnchoredPosition: {x: -361.5, y: -234.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1798389170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798389168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dfa8b373bc489247b889515fab550fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMeshProUGUI: {fileID: 0}
 --- !u!114 &1798389171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,3 +361,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798389168}
   m_CullTransparentMesh: 1
+--- !u!114 &1798389173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798389168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7e0b0d0c4e3a542adbbe42715683c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEventToSubscribe: {fileID: 11400000, guid: 2c5480974d232ec43b6f60048eee5df6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1798389174}
+        m_TargetAssemblyTypeName: PlayerHealthTextDisplay, Assembly-CSharp
+        m_MethodName: UpdatePlayerText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LALALAL
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1798389174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1798389168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7bfdb99597e3de4592a410635cc9a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: 63e6b0d6eb8c03d479c684408855889d, type: 2}
