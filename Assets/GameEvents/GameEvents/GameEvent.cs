@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * https://blog.devgenius.io/scriptableobject-game-events-1f3401bbde72
+ * 
+ * https://unity.com/how-to/architect-game-code-scriptable-objects#event-system-handles-player-death
+ */
+
 [CreateAssetMenu(menuName = "Scriptable Objects/Events/New Game Event", fileName = "New Game Event")]
 public class GameEvent : ScriptableObject
 {
